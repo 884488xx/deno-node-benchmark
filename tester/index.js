@@ -26,12 +26,14 @@ const runTests = async ({ rounds = [100], concurrency = 5 }) => {
               parallelExec.push(execFlow(addBookFlow, hosts[hostList[counter]]));
             }
   
-            await Promise.allSettled(parallelExec);
+            // NOTE: using Promise.all to crash and set the status to ERROR
+            await Promise.all(parallelExec);
           } catch (error) {
             console.error(`Error executing round ${i + 1}`, error);
             status = 'Error';
           }
   
+          console.log(`Executed round ${i+1} of ${ rounds[roundCounter]} of type ${hostList[counter]}`);
           // TODO: should save currentROUND and totalROUNDS
           // SAVES NEW ROW TO REPORT TB
           db.executeQuery(`INSERT INTO 

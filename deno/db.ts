@@ -1,5 +1,4 @@
 import { Client } from "https://deno.land/x/postgres/mod.ts";
-import * as v4 from 'https://deno.land/std/uuid/v4.ts'
 
 // You can use the connection interface to set the connection properties
 const config = {

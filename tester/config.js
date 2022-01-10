@@ -1,7 +1,7 @@
 module.exports = {
   hosts: {
     deno: 'http://localhost:7700',
-    // node: 'http://localhost:3000',
+    node: 'http://localhost:3000',
   },
   db: {
     user: 'postgres',
@@ -11,7 +11,8 @@ module.exports = {
     port: 5432,
   },
   tests: {
-    rounds: [500, 1000, 3000, 5000, 10000],
-    concurrency: 10
+    // rounds: [500, 1000, 3000, 5000, 10000],
+    rounds: [500],
+    concurrency: 5
   },
 };
