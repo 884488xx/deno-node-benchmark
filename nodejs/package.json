@@ -1,0 +1,18 @@
+{
+  "name": "deno-vs-node",
+  "version": "1.0.0",
+  "description": "Deno and NodeJS REST API comparison",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Murilo Portescheller <@mukaportes>",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.1.1",
+    "pg": "^8.7.1",
+    "uuid": "^8.3.2"
+  }
+}
