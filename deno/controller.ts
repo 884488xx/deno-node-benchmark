@@ -37,7 +37,7 @@ const addBook = async ({ request, response }: { request: any; response: any }) =
       response.status = 400
     }
   } catch (error) {
-    response.body = { message: 'Failed to create new book - Exception', error: error.message }
+    response.body = { message: 'Failed to create new book - Exception', error: error }
     response.status = 500
   }
 }
